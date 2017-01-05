@@ -9,7 +9,7 @@
         <div class="contenedor">
             <div class="centro-med">
                 <div class="lado frente panel panel-default">
-                  <div class="panel-heading tarjeta-titulo">
+                  <div class="panel-heading tarjeta-titulo teal-text">
                     {{centro.nombre}}
                   </div>
                   <img src="{{centro.portada}}" alt="imagen"> 
@@ -20,16 +20,16 @@
                         <p dia text-center small>Horarios</p>
                         <p ng-repeat="dia in centro.horarios" class="dia text-center small">{{dia.horario}}</p>
                     </div>
-                    <button type="button" class="btn btn-primary btn-block info
-                    modal-trigger waves-effect waves-light btn cyan darken-2" href="#modalInfo" ng-click="procesar(centro)">Más Información</button>
+                    <button type="button" class="btn info
+                    modal-trigger teal" href="#modalInfo" ng-click="procesar(centro)">Más Información</button>
                 </div>
                 
             </div>
             <div class="modal gray" id="modalInfo">
                     <h5 class="text-center teal-text">{{actual.nombre}}</h5>
-                    <div class="container-fluid row">
+                    <div class="row">
 
-                    <div id="myCarousel" style="height:400px;" class="carousel slide" data-ride="carousel">
+                    <div id="myCarousel" style="height:400px;" class="carousel slide col m12" data-ride="carousel">
 
                       <div class="carousel-inner" style="height:400px;" role="listbox">
                         <div class="item active">
@@ -52,25 +52,27 @@
 
                     </div>
                                         
-                    <div class="container-fluid row">
-                      <div class="panel col s12 m6">
-                        <div class="card" >
-                          <div class="panel-body" style="height:286px;width:100%;border:0">
+                    <div class="row">
+                      
+                        <div class="card-panel col s12 m4 offset-m1" style="height:286px;border:0">
+                          <div class="panel-body">
                           <p class="text-center">Ciudad: {{actual.ciudad}}</p>
                           <p class="text-center">Direccion: {{actual.direccion}}</p>
                           <p class="text-center">Descripcion:  {{actual.descripcion}}</p>
                         </div>  
                         </div>
-                      </div>
-                      <div class="panel col s12 m6">
-                      <div class="card">
+                      
+                      <div class="card-panel col s12 m6" style="height:286px;border:0">
                         <div class="panel-body">
                           <iframe src="{{setUrl(actual)}}" frameborder="0" style="height:250px;width:100%;border:0" allowfullscreen></iframe>
                         </div> 
                       </div>
                         
-                      </div>  
+                        
                     </div> 
+                    <div class="row">
+                      <button class="btn teal col s4 offset-s4" ng-click="cerrarMod()">Cerrar</button>
+                    </div>
                     
             </div>
         </div>

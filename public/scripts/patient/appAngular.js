@@ -82,6 +82,7 @@ angular.module('appPatient', ['ui.router', 'ngTable'])
             $state.go('centros');    
         }
 
+
     })
     .controller('ctrlExamenes', function($http, $scope, $state, comun) {
         comun.getDatos();
@@ -247,6 +248,11 @@ angular.module('appPatient', ['ui.router', 'ngTable'])
             $('.carousel').carousel();
         });
 
+        //boton cerrar de Informacion de Centro Med
+        $scope.cerrarMod = function(){
+            $('#modalInfo').closeModal();
+            //$state.reload();
+        }
         //$('.carousel.carousel-slider').carousel({full_width: true});
               
 
