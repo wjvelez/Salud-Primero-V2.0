@@ -11,13 +11,14 @@
     "client-sessions": "~0.7.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
-    "ejs": "^2.4.2",
+    "ejs": "^2.5.7",
     "express": "~4.13.4",
-    "mongoose": "^4.5.9",
+    "mongoose": "^4.13.9",
     "morgan": "~1.7.0",
-    "nodemailer": "^2.5.0",
+    "nodemailer": "^2.7.2",
     "nodemailer-smtp-transport": "^2.6.0",
     "pdfmake": "^0.1.18",
+    "save": "^2.3.2",
     "serve-favicon": "~2.3.0",
     "ui-select": "^0.19.4"
   }
